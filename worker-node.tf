@@ -16,7 +16,7 @@ resource "openstack_compute_instance_v2" "worker-node" {
     fixed_ip_v4 = cidrhost(openstack_networking_subnet_v2.anthos-subnet.cidr, count.index + 200)
   }
 
-    connection {
+  connection {
     type        = "ssh"
     user        = "ubuntu"
     host        = self.access_ip_v4

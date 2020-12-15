@@ -76,7 +76,7 @@ variable "private-subnet" {
 }
 
 variable "anthos-baremetal-version" {
-  type = string
+  type        = string
   description = "Version of Anthos baremetal"
-  default = "1.6.0"
+  default     = "1.6.0"
 }

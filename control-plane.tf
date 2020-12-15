@@ -4,7 +4,7 @@ resource "openstack_compute_instance_v2" "control-plane" {
   image_name      = var.instance-image-name
   flavor_name     = var.control-plane-instance-size
   key_pair        = openstack_compute_keypair_v2.ssh-key.name
-  security_groups = [openstack_compute_secgroup_v2.control-plane-sg.id,openstack_compute_secgroup_v2.load-balancer-sg.id]
+  security_groups = [openstack_compute_secgroup_v2.control-plane-sg.id, openstack_compute_secgroup_v2.load-balancer-sg.id]
   #  tags            = [var.cluster-name, "control-plane"]
 
   network {
